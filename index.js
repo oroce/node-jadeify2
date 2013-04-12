@@ -31,7 +31,7 @@ function browjadify(file) {
 function compile(file, source) {
   var template = jade.compile(source, {
     client: true,
-    filename: relative(__dirname, file)
+    filename: file //relative(__dirname, file)
   })
   return [
     'var jade = require(\'jade/lib/runtime.js\');',
